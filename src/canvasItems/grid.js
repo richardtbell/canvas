@@ -1,10 +1,10 @@
-const drawGrid = ({
-  ctx, minor = 10, major = minor * 5, stroke = '#00FF00', fill = '#009900',
+const grid = ({
+  ctx, minor = 10, major = minor * 5, lineColor = '#00FF00', textColor = '#009900',
 }) => {
   const isMajor = x => x % major === 0;
   ctx.save();
-  ctx.strokeStyle = stroke;
-  ctx.fillStyle = fill;
+  ctx.strokeStyle = lineColor;
+  ctx.fillStyle = textColor;
   const { width, height } = ctx.canvas;
   for (let x = 0; x < width; x += minor) {
     ctx.beginPath();
@@ -25,4 +25,4 @@ const drawGrid = ({
   ctx.restore();
 };
 
-export default drawGrid;
+export default grid;

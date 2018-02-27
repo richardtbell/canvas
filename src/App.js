@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './exercise2/styles.css';
-import makeDrawing from './exercise2/drawing';
+import './index.css';
+import makeDrawing from './canvasItems/drawing';
 
 class App extends Component {
   componentDidMount() {
@@ -11,7 +11,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>More drawing to canvas</h1>
         <canvas ref={(el) => { this.canvas = el; }} width="400" height="400" />
       </div>
     );
